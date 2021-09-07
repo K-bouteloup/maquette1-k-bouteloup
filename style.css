@@ -1,0 +1,261 @@
+/* ---    TABLE DES STYLES  ---*/
+/* --- header et nav bar    ---*/
+/* --- main                 ---*/
+/* --- article              ---*/
+/* --- SECTION              ---*/
+/* --- aside                ---*/
+/* --- @media(1250px)       ---*/
+/* --- @media(821px)        ---*/
+/* --- @media(629px)        ---*/
+/* --- @media(500px)        ---*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Montserrat:wght@300;500;700&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding:0;
+    font-size: 16px;
+}
+ /* header et nav bar */
+header nav{
+    position: relative;
+    max-width:1440px;
+    margin:0 auto;
+}
+header nav li{
+    display: inline-block;
+    justify-content: space-between;
+}
+header li a{
+    color:#9F9F9F;
+    text-decoration: none;
+    padding: 2.2rem 6.9rem;
+    display: block;   
+}
+header li:first-of-type a{
+    padding: 2.2rem 6.9rem 2.2rem 0;
+}
+header li a:hover{
+    color: black;
+}
+header nav .active{
+    color: black;
+}
+header .logo{
+    position: absolute;
+    top: 2rem;
+    right:0;
+}
+header .logo a:last-of-type{
+    padding:2.2rem 0 2.2rem 2rem;
+}
+header .logo a{
+    padding:2.2rem 1.9rem;
+}
+header > img{
+    width: 100%;
+}
+
+/* main */
+main{
+    max-width: 1440px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/*section*/
+main section{
+    display: flex;
+    flex-direction: column;
+}
+/* article*/
+main section article{
+    display: flex;
+    max-width: 1040px;
+    margin-left:3rem;
+    margin:2rem 0 ;
+}
+main section .text{
+    margin-right:6.25rem;
+}
+main section img{
+    margin-right:1.25rem;
+    object-fit: cover;
+    width: 100%;
+}
+main section p:first-of-type{
+    font-weight: 300;
+    opacity: 60%;
+    margin-bottom: 0.5rem;
+}
+main section h2{
+    font-family: 'cardo',serif;
+    font-size: 2rem;
+    font-weight:700 ;
+    margin-bottom:1rem;
+}
+main section p:last-of-type{
+    text-align: justify;
+    font-weight: 500;
+    opacity: 87%;
+    line-height: 1.88rem;
+}
+/*aside*/
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color:#F9F9F9;   
+}
+aside .categories{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding:0 1.88rem;
+}
+aside .categories h2{
+    font-weight: 700;
+    font-size: 1.88rem;
+    text-align: justify;
+    margin-bottom: 2.25rem;
+    margin-top:2.69rem;
+}
+aside .categories a{
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: justify;
+    color:#9F9F9F;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+aside hr{
+    width:74%;
+    margin: 2.8rem auto;
+   
+}
+/*@media(1250px)*/
+@media screen and (max-width:1250px){
+    header li a{
+        padding: 2.2rem 3rem;
+    }
+    header li:first-of-type a{
+        padding: 2.2rem 3rem 2.2rem 0;
+    }
+    main{
+        flex-direction: column;
+    }
+    aside{
+        flex-direction: row;
+        margin:0 auto;
+        justify-content: space-around;
+        width:100%
+    }
+    aside hr{
+        width:1px;
+        margin:0;
+    }
+    main section article{
+        margin:2rem 2rem ;
+    }
+    main section h2{
+        font-size: 1.75rem;
+    }
+    main section .text{
+        margin-right:0;
+    }
+}
+/*@media(821px)*/
+@media screen and (max-width:821px){
+    header li a{
+        padding: 1.5rem 1rem;
+    }
+    header .logo a{
+        padding:1.5rem 1rem;
+    }
+    header li:first-of-type a{
+        padding: 1.5rem 1rem 1.5rem 0;
+    }
+    header .logo{
+        top: 1.5rem;
+        right:1rem;
+    }
+    main section{
+        padding: 1rem;
+    }
+    main section article{
+        flex-direction: column;
+        position: relative;
+        padding-top: 2rem;
+    }
+    main section img{
+        width: 100%;
+        height: 150px;
+        margin-bottom:1rem;
+    }
+    main section h2{
+        position: absolute;
+        top:-1.50rem;
+        font-size:1.5rem ;
+    }
+    main section p:first-of-type{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    header .logo a:last-of-type{
+        padding:1.5rem  0 1.5rem 1rem;
+    }
+}
+/*@media(629px)*/
+@media screen and (max-width:629px){
+    header li:first-of-type a{
+        padding: 1.5rem 1rem 1.5rem 0;
+    }
+    aside{ 
+        flex-direction:column ;
+    }
+    aside hr{
+        width: 74%;
+        margin:0 auto;
+        margin-top:2.69rem;
+    }
+    main section p:first-of-type{
+        left:0;
+        top:0.5rem;
+        right:unset;
+    }
+    main section h2{
+        top:-2rem;
+    }
+}
+/*@media(500px)*/
+@media screen and (max-width:500px){
+    *{
+        font-size: 12px;
+    }
+    header nav  li{
+        display: flex;
+        flex-direction: column;
+    }
+    header li a{
+        text-align: center;
+    }
+    header li:first-of-type a{
+        padding: 1.5rem 1rem;
+    }
+    header .logo{
+        position:unset;
+        display: flex;
+    }
+    header .logo a{
+        box-sizing: border-box;
+        margin:0 auto;
+    }
+    header .logo a:last-of-type{
+        padding:1.5rem  1rem;
+    }
+    main section h2{
+        font-size: 1.50rem;
+    }
+}
